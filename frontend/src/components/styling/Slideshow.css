@@ -1,0 +1,57 @@
+.horizontal-gallery-wrapper3 {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  padding: 0 1rem; /* Side padding so part of the next image is visible */
+  box-sizing: border-box;
+  margin-top: 2rem;
+  height: 200px;
+  overflow-y: hidden;
+}
+
+.horizontal-gallery3 {
+  display: flex;
+  gap: 1rem;
+}
+
+.gallery-item3 {
+  flex: 0 0 auto;
+  width: 80vw; /* fixed width for each image */
+  height: 300px; /* fixed height */
+}
+
+.gallery-item3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Remove grayscale and apply scale when the image is fully visible */
+.gallery-item3 img.active {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+  z-index: 1;
+}
+
+/* Optional: keep hover effect as well if desired */
+/* .gallery-item3:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+  z-index: 1;
+} */
+
+/* Hide the horizontal gallery on screens 800px and wider */
+@media (min-width: 799.98px) {
+  .horizontal-gallery-wrapper3 {
+    display: none;
+  }
+  .gallery-heading {
+    display: none;
+  }
+}
+.gallery-heading {
+  text-align: center;
+  margin-top: 20px;
+}

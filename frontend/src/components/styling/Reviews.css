@@ -1,0 +1,114 @@
+/* General Wrapper */
+.reviews-wrapper {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+/* Notice */
+.login-note {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+/* Headline */
+.reviews-wrapper h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Review Form */
+.review-form {
+  /* border: 1px solid #6c6c6c; */
+  padding: 1.25rem;
+  margin-bottom: 4rem;
+  border-radius: 8px;
+  background-color: #282828;
+}
+
+.review-form label {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+.review-form input[type="number"],
+.review-form textarea,
+.review-form select {
+  width: 100%;
+  padding: 0.75rem;
+  background: #ffffff;
+  border: none;
+  font-size: 1rem;
+  color: #121212;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.review-form button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: #fff;
+  color: #121212;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.review-form button:hover {
+  background: #e2e2e2;
+}
+
+/* Reviews Grid */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+/* Review Card */
+.review-card {
+  background: #facc15;
+  color: #121212;
+  padding: 1rem;
+  position: relative;
+  border-radius: 6px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+}
+
+.review-card .rating {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Delete Button */
+.delete-button {
+  align-self: flex-end;
+  margin-top: 0.75rem;
+  background: #121212;
+  border: none;
+  font-weight: bold;
+  color: #facc15;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* Textarea Placeholder Color */
+.review-form textarea::placeholder {
+  color: #121212;
+  opacity: 1;
+}

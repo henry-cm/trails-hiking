@@ -1,0 +1,76 @@
+/* components/styling/Footer.css */
+
+.footer {
+  background-color: #fff;
+  color: #121212;
+  padding: 1.5rem 2rem;
+  margin-top: 25vh;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer-year {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #121212;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.footer-divider {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #121212;
+}
+
+.footer-bottom {
+  text-align: left;
+}
+
+.footer-logo {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 🔁 Mobile Responsiveness */
+@media (max-width: 700px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .footer-logo {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .footer-logo {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,148 @@
+.trail-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  max-width: 850px;
+  height: 300px;
+  transition: transform 0.3s ease;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.trail-card:hover {
+  transform: scale(1.01);
+}
+
+.trail-image {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.trail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trail-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.trail-location {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.trail-description {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.view-button {
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #facc15;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #fff;
+}
+
+/* MOBILE STYLING: for screens below 768px */
+@media (max-width: 768px) {
+  .trail-card {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .trail-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .trail-info {
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .trail-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    word-break: break-word;
+  }
+
+  .trail-location {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+
+  .trail-description {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    font-size: 0.95rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+  }
+
+  .view-button {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* EXTRA SMALL DEVICES: for screens below 480px */
+@media (max-width: 480px) {
+  .trail-title {
+    font-size: 1.4rem;
+  }
+
+  .trail-location {
+    font-size: 1rem;
+  }
+
+  .trail-description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+  }
+
+  .view-button {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}

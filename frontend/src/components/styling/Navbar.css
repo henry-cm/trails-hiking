@@ -1,0 +1,276 @@
+/* Base Navbar Styles */
+.navbar {
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  background-color: #121212;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  z-index: 1000;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  animation: slideInTop 0.5s forwards;
+}
+
+/* Mobile Menu Toggle */
+
+.mobile-menu-toggle,
+.mobile-menu-close {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-menu-close {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+
+@keyframes slideInTop {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.nav-links,
+.auth-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #f0f0f0;
+  margin: 0 3rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #facc15;
+}
+
+.logout-btn {
+  background: none;
+  /* color: #facc15; */
+  border: none;
+  padding-right: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* display: flex;
+  align-items: center; */
+  font-weight: 400;
+
+  padding-left: 0;
+}
+
+/* Scrolled State for Side Navbar (Desktop Only) */
+@media (min-width: 851px) {
+  .navbar.scrolled {
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f0c515;
+    box-shadow: 10px 10px;
+    border-radius: 8px 0 0 8px;
+    animation: slideInSide 0.5s forwards;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .navbar.scrolled .nav-links,
+  .navbar.scrolled .auth-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar.scrolled .auth-links {
+    margin-top: 1rem;
+  }
+
+  .navbar.scrolled a,
+  .navbar.scrolled .logout-btn {
+    margin: 0 1rem;
+    transform: none;
+    white-space: nowrap;
+    color: #1c1c1c;
+    font-weight: 600;
+    font-size: 24px;
+    padding-right: 0rem;
+  }
+
+  .navbar.scrolled a:hover,
+  .navbar.scrolled .logout-btn:hover {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1350px) {
+  .navbar {
+    padding: 1rem 0rem;
+  }
+
+  .navbar a,
+  .navbar .logout-btn {
+    font-size: 18px; /* Slightly smaller font size */
+    margin: 0 1.5rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.8rem;
+    font-size: 20px; /* Slightly smaller for scrolled state */
+  }
+
+  .navbar.scrolled a,
+  .navbar.scrolled .logout-btn {
+    margin: 0.5rem 0;
+    font-size: 18px;
+  }
+
+  .mobile-menu-toggle,
+  .mobile-menu-close {
+    font-size: 24px; /* Smaller toggle for mid-size screens */
+  }
+  .logout-btn {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* Mobile Menu */
+@media (max-width: 850px) {
+  .mobile-menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+  }
+
+  .navbar a,
+  .navbar .logout-btn {
+    margin: 1rem 0;
+    font-size: 24px;
+  }
+
+  .mobile-menu-close {
+    display: block;
+  }
+
+  /* Prevent scrolling when menu is open */
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 850px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: #1c1c1c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  .navbar {
+    padding: 2rem 4rem;
+  }
+  .logout-btn {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .mobile-menu .nav-links,
+  .mobile-menu .auth-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .mobile-menu .auth-links {
+    margin-top: 1.5rem;
+  }
+
+  .navbar a,
+  .navbar .logout-btn {
+    margin: 0;
+    font-size: 28px;
+
+    color: #e2ce7e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover,
+  .navbar .logout-btn:hover {
+    color: #fff;
+  }
+
+  .mobile-menu-close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Hide desktop links on mobile */
+  .nav-links.desktop,
+  .auth-links.desktop {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  /* Existing styles for the hamburger menu */
+  .mobile-menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    transition: top 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* When navbar is hidden, also hide the hamburger */
+  .navbar.mobile-hidden .mobile-menu-toggle {
+    top: -50px; /* Moves it off the top of the screen */
+    opacity: 0;
+  }
+}
+@media (max-width: 850px) {
+  /* .navbar {
+    transform: translateY(0);
+  } */
+  .navbar.mobile-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,159 @@
+.how-it-works {
+  padding: 4rem 2rem;
+  color: white;
+  background-color: #121212;
+}
+
+/* Intro text styling */
+.intro-text {
+  text-align: right;
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin-bottom: 2.5rem;
+  max-width: 86%;
+  display: flex;
+  justify-content: right;
+}
+.intro-text-text {
+  display: flex;
+  align-items: flex-end;
+  max-width: 40rem;
+}
+
+/* How it works container and headings */
+.how-it-container {
+  margin: 20px auto;
+  width: 85%;
+}
+.how-it {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  margin-top: 6rem;
+}
+
+/* Step styling */
+.step {
+  border-bottom: 1px solid #555;
+  padding: 2rem 0;
+  display: flex;
+  gap: 1.5rem;
+}
+.step-number {
+  font-size: 1.2rem;
+  color: #888;
+  font-weight: 200;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+}
+.step-content {
+  /* Optional: constrain width for readability */
+  max-width: 40rem;
+}
+.step-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.subheading {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+.step-text {
+  font-size: 1.25rem;
+  font-weight: 100;
+  max-width: 40rem;
+}
+
+/* Custom horizontal line */
+.custom-line {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 20px auto;
+  width: 85%;
+}
+
+/* Responsive Design for Tablets and below */
+@media (max-width: 1024px) {
+  .how-it-works {
+    padding: 3rem 1.5rem;
+  }
+  .intro-text {
+    text-align: left;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .intro-text-text {
+    max-width: 90%;
+  }
+  .how-it-container {
+    width: 90%;
+  }
+  .how-it {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .step-number {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .step-content {
+    max-width: 90%;
+  }
+  .step-title {
+    font-size: 1.8rem;
+  }
+  .subheading {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .step-text {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Responsive Design for Very Small Devices */
+@media (max-width: 480px) {
+  .how-it-works {
+    padding: 2rem 1rem;
+  }
+  .how-it {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .intro-text {
+    font-size: 1.4rem;
+  }
+  .step-number {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .step-title {
+    font-size: 1.6rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+  }
+  .step-text {
+    font-size: 0.9rem;
+  }
+}

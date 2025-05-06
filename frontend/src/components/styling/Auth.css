@@ -1,0 +1,192 @@
+/* Base reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Container for the entire auth page */
+.auth-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #121212;
+  overflow-x: hidden;
+}
+
+/* Form section */
+.auth-form-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.auth-form-wrapper label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.auth-form-wrapper input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #303030;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.auth-form-wrapper button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #facc15;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.auth-form-wrapper .error {
+  background-color: #ffc0cb;
+  color: #121212;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Fix white side-padding bug */
+* {
+  box-sizing: border-box;
+}
+
+/* Flex container for auth info and form */
+.auth-flex {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.auth-info {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f3f3f3;
+  padding-top: 4rem;
+  max-width: 1000px;
+  /* align-content: center; */
+}
+
+.auth-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.auth-divider {
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-form-wrapper {
+  flex: 1;
+  padding-top: 4rem;
+}
+@media (max-width: 1024px) {
+  .auth-flex {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .auth-info {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .auth-info h2 {
+    font-size: 2rem;
+  }
+
+  .auth-form-wrapper label {
+    font-size: 1.3rem;
+  }
+
+  .auth-form-wrapper input,
+  .auth-form-wrapper button {
+    font-size: 1.3rem;
+  }
+}
+/* Responsive Styles for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .auth-form-wrapper {
+    padding: 3rem 1rem;
+    max-width: 90%;
+  }
+
+  .auth-flex {
+    flex-direction: column-reverse;
+
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .auth-info {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .auth-info h2 {
+    font-size: 2rem;
+  }
+
+  .auth-form-wrapper label {
+    font-size: 1.3rem;
+  }
+
+  .auth-form-wrapper input,
+  .auth-form-wrapper button {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive Styles for Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .auth-form-wrapper {
+    padding: 2rem 0.5rem;
+    max-width: 95%;
+  }
+
+  .auth-flex {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+
+  .auth-info {
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+
+  .auth-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .auth-form-wrapper label {
+    font-size: 1.2rem;
+  }
+
+  .auth-form-wrapper input,
+  .auth-form-wrapper button {
+    font-size: 1.2rem;
+  }
+}

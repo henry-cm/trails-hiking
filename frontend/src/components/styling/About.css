@@ -1,0 +1,113 @@
+.about-container {
+  position: relative;
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Base About Content for Desktop */
+.about-content {
+  padding: 10rem;
+}
+.about-content .intro {
+  margin-bottom: 8rem;
+}
+.about-content p,
+.about-content ul {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+.about-section {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #555;
+}
+.about-section h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.about-content .about-section h4 {
+  font-size: 2rem;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .about-content {
+    padding: 4rem 2rem;
+  }
+  .about-content p,
+  .about-content ul {
+    font-size: 1.1rem;
+  }
+  .about-section h2 {
+    font-size: 2.5rem;
+  }
+  .about-content .about-section h4 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 2rem 1rem;
+  }
+  .about-content p,
+  .about-content ul {
+    font-size: 1rem;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+  }
+  .about-content .about-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .about-content .intro {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Very Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-content {
+    padding: 1rem;
+  }
+  .about-content p,
+  .about-content ul {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+  .about-content .about-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .about-content .intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+/* Additional Adjustments (if needed for marquee and titles) */
+@media (max-width: 1150px) {
+  .about-title {
+    font-size: 3rem;
+  }
+  .marquee-text {
+    font-size: 16px;
+  }
+}
+
+/* Remove border from the last section */
+.about-section:last-child {
+  border-bottom: none;
+}

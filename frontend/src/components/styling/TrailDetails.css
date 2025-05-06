@@ -1,0 +1,281 @@
+.trail-wrapper {
+  background: #121212;
+  color: #fff;
+  font-family: sans-serif;
+  /* margin-top: 2rem; */
+  padding: 10rem;
+}
+.trail-wrapper1 {
+  background: #121212;
+  color: #fff;
+  font-family: sans-serif;
+
+  padding: 5rem 10rem;
+}
+
+.trail-main {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* 🔥 this ensures the divider stretches full height */
+  gap: 2rem;
+}
+
+.trail-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.trail-image img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.trail-map {
+  height: 250px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.divider {
+  width: 2px;
+  background-color: #444; /* or use #fff or #666 based on visibility */
+  height: auto;
+  align-self: stretch;
+  opacity: 0.6;
+}
+
+.trail-right {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.btn-back {
+  background: #facc15;
+  color: #121212;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.trail-title2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.trail-location2 {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.trail-title1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.trail-location1 {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.trail-description1 {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.trail-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.5rem 4rem;
+  border: none;
+  /* font-weight: 400; */
+  cursor: pointer;
+  text-decoration: none;
+  /* font-size: 24px; */
+  text-align: center;
+
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.btn-edit {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.btn-delete {
+  background-color: #facc15;
+  color: #121212;
+}
+
+.trail-carousel {
+  position: relative;
+  max-height: 350px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #facc15;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Tablet: Adjust paddings and font sizes for screens 1024px and below */
+
+@media (max-width: 1300px) {
+  .trail-wrapper {
+    padding: 10rem 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .trail-wrapper {
+    padding: 10rem 2rem;
+  }
+  .trail-wrapper1 {
+    padding: 3rem 2rem;
+  }
+  .trail-title2 {
+    font-size: 1.8rem;
+  }
+  .btn-back {
+    font-size: 24px;
+    padding: 0.75rem 2rem;
+  }
+  .btn-edit,
+  .btn-delete {
+    font-size: 1.3rem;
+    padding: 0.5rem 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .btn-back {
+    display: none;
+  }
+  .trail-title1 {
+    display: none;
+  }
+
+  .trail-location1 {
+    display: none;
+  }
+}
+@media (min-width: 850px) {
+  .btn-back {
+    display: none;
+  }
+  .trail-title2 {
+    display: none;
+  }
+
+  .trail-location2 {
+    display: none;
+  }
+}
+
+/* Mobile: Stack content vertically and reduce image heights for screens 768px and below */
+@media (max-width: 850px) {
+  .trail-main {
+    flex-direction: column;
+  }
+  .trail-wrapper {
+    padding: 6rem 3rem;
+  }
+  .trail-wrapper1 {
+    padding: 2rem 1rem;
+  }
+  .divider {
+    display: none;
+  }
+  .trail-title {
+    font-size: 1.6rem;
+  }
+  .trail-location,
+  .trail-description1 {
+    font-size: 1rem;
+  }
+  .trail-map {
+    height: 200px;
+  }
+  .carousel-image,
+  .trail-image img {
+    max-height: 250px;
+  }
+  .trail-buttons {
+    justify-content: center;
+  }
+}
+
+/* Very Small Devices: Further reduce paddings and font sizes for screens 480px and below */
+@media (max-width: 480px) {
+  .trail-wrapper {
+    padding: 6rem 1rem;
+  }
+  .trail-wrapper1 {
+    padding: 1.5rem 0.5rem;
+  }
+  .trail-title {
+    font-size: 1.4rem;
+  }
+  .trail-location,
+  .trail-description1 {
+    font-size: 0.9rem;
+  }
+  .btn-back {
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+  }
+  .btn-edit,
+  .btn-delete {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+}

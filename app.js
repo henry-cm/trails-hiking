@@ -110,7 +110,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", userRoutes);
+app.use("/api/users", userRoutes);
 
 app.use("/trailgrounds", trailgroundRoutes);
 app.use("/trailgrounds/:id/reviews", reviewRoutes);

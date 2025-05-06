@@ -9,7 +9,7 @@ export const UserProvider = ({ children }) => {
   const fetchUser = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/current-user`,
+        `${import.meta.env.VITE_API_URL}/api/users/current-user`,
         {
           credentials: "include",
         }

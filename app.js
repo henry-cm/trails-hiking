@@ -21,7 +21,7 @@ const trailgroundRoutes = require("./routes/trailgrounds");
 const reviewRoutes = require("./routes/reviews");
 const aboutRoutes = require("./routes/about");
 
-mongoose.connect("mongodb://localhost:27017/trails", {});
+mongoose.connect(process.env.MONGODB_URI, {}); //first change
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -34,7 +34,12 @@ const app = express();
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://192.168.0.130:5173"],
+    origin: [
+      "http://localhost:5173",
+      "http://192.168.0.130:5173",
+      "https://trails-hiking.com",
+      "https://www.trails-hiking.com",
+    ],
     credentials: true,
   })
 );

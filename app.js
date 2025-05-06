@@ -131,8 +131,8 @@ app.use((err, req, res, next) => {
   res.status(statusCode).json({ error: err.message });
 });
 
-app.listen(5000, "0.0.0.0", () => {
-  console.log(
-    "✅ Backend serving on http://localhost:5000 and your local network"
-  );
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });

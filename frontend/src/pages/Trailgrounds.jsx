@@ -11,7 +11,7 @@ const Trailgrounds = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/trailgrounds", {
+    fetch(`${import.meta.env.VITE_API_URL}/trailgrounds`, {
       method: "GET",
       credentials: "include",
     })

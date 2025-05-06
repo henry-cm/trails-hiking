@@ -17,7 +17,7 @@ const TrailDetails = ({ user: initialUser }) => {
 
   useEffect(() => {
     if (!user) {
-      fetch("http://localhost:5000/current-user", {
+      fetch("https://trails-backend.onrender.com/current-user", {
         method: "GET",
         credentials: "include",
       })
@@ -28,7 +28,7 @@ const TrailDetails = ({ user: initialUser }) => {
   }, [user]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/trailgrounds/${id}`, {
+    fetch(`https://trails-backend.onrender.com/trailgrounds/${id}`, {
       method: "GET",
       credentials: "include",
     })
@@ -43,10 +43,13 @@ const TrailDetails = ({ user: initialUser }) => {
     if (!window.confirm("Are you sure you want to delete this trail?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/trailgrounds/${id}`, {
-        method: "DELETE",
-        credentials: "include",
-      });
+      const response = await fetch(
+        `https://trails-backend.onrender.com/trailgrounds/${id}`,
+        {
+          method: "DELETE",
+          credentials: "include",
+        }
+      );
 
       if (!response.ok) {
         alert("Failed to delete trail.");

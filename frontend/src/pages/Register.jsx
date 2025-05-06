@@ -52,16 +52,19 @@ const Register = ({ setUser }) => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username: formData.username,
-          email: formData.email,
-          password: formData.password,
-        }),
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://trails-backend.onrender.com/register",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: formData.username,
+            email: formData.email,
+            password: formData.password,
+          }),
+          credentials: "include",
+        }
+      );
 
       const data = await response.json();
 

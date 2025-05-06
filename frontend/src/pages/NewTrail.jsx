@@ -65,11 +65,14 @@ const NewTrail = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/trailgrounds", {
-        method: "POST",
-        body: formData,
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://trails-backend.onrender.com/trailgrounds",
+        {
+          method: "POST",
+          body: formData,
+          credentials: "include",
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();

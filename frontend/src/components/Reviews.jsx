@@ -45,7 +45,7 @@ export default function Reviews({ user, reviews = [], trailId }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/trailgrounds/${trailId}/reviews`,
+        `${import.meta.env.VITE_API_URL}/trailgrounds/${trailId}/reviews`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -73,7 +73,9 @@ export default function Reviews({ user, reviews = [], trailId }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/trailgrounds/${trailId}/reviews/${reviewId}`,
+        `${
+          import.meta.env.VITE_API_URL
+        }/trailgrounds/${trailId}/reviews/${reviewId}`,
         {
           method: "DELETE",
           credentials: "include",

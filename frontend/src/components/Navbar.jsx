@@ -10,7 +10,7 @@ const Navbar = () => {
   const [mobileNavVisible, setMobileNavVisible] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/current-user", {
+    fetch(`${import.meta.env.VITE_API_URL}/current-user`, {
       method: "GET",
       credentials: "include",
     })
@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   const handleLogout = async () => {
-    await fetch("http://localhost:5000/logout", {
+    await fetch(`${import.meta.env.VITE_API_URL}/logout`, {
       method: "POST",
       credentials: "include",
     });

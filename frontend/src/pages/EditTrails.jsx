@@ -29,7 +29,7 @@ const EditTrail = ({ user }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/trailgrounds/${id}`)
+    fetch(`https://trails-backend.onrender.com/trailgrounds/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setTrail(data);
@@ -98,11 +98,14 @@ const EditTrail = ({ user }) => {
     });
 
     try {
-      const response = await fetch(`http://localhost:5000/trailgrounds/${id}`, {
-        method: "PUT",
-        body: formData,
-        credentials: "include",
-      });
+      const response = await fetch(
+        `https://trails-backend.onrender.com/trailgrounds/${id}`,
+        {
+          method: "PUT",
+          body: formData,
+          credentials: "include",
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();

@@ -22,14 +22,17 @@ const Navbar = () => {
   }, []);
 
   const handleLogout = async () => {
-    await fetch(`${import.meta.env.VITE_API_URL}/logout`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/users/logout`, {
       method: "POST",
-      credentials: "include",
+      credentials: "include", // send session cookie
     });
-    setUser(null);
+
+    setUser(null); // clear state
     closeMobileMenu();
+
+    // Optional: reload or redirect
     setTimeout(() => {
-      window.location.reload();
+      window.location.reload(); // or navigate('/')
     }, 20);
   };
 

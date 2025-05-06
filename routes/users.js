@@ -61,7 +61,11 @@ router.post("/logout", (req, res, next) => {
   req.logout(function (err) {
     if (err) return next(err);
     req.session.destroy(() => {
-      res.clearCookie("connect.sid"); // ✅ Clears session cookie
+      res.clearCookie("connect.sid", {
+        sameSite: "none", // Required for cross-origin
+        secure: true, // Required for HTTPS
+      });
+
       return res.json({ message: "Logout successful" });
     });
   });

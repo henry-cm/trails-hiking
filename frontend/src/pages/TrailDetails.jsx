@@ -17,7 +17,7 @@ const TrailDetails = ({ user: initialUser }) => {
 
   useEffect(() => {
     if (!user) {
-      fetch("https://trails-backend.onrender.com/current-user", {
+      fetch(`${import.meta.env.VITE_API_URL}/api/users/current-user`, {
         method: "GET",
         credentials: "include",
       })

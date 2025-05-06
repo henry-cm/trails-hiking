@@ -38,7 +38,7 @@ function App() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/current-user", {
+    fetch(`${import.meta.env.VITE_API_URL}/current-user`, {
       method: "GET",
       credentials: "include",
     })

@@ -166,7 +166,6 @@ module.exports.destroyTrailground = async (req, res) => {
     );
 
     await trailground.deleteOne(); // Use deleteOne() for better performance
-    res.json({ message: "Trail deleted successfully" });
 
     res.json({ message: "Trail deleted successfully" });
   } catch (error) {

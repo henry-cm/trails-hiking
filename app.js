@@ -35,10 +35,10 @@ const cors = require("cors");
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "http://192.168.0.130:5173",
       "https://trails-hiking.com",
       "https://www.trails-hiking.com",
+      "http://localhost:5173",
+      "http://192.168.0.130:5173",
     ],
     credentials: true,
   })
@@ -53,12 +53,12 @@ app.use(express.static(path.join(__dirname, "public")));
 const sessionConfig = {
   secret: "shouldbeabettersecret",
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: false, // required
   cookie: {
     httpOnly: true,
-    secure: true, // Set to true if using HTTPS
-    sameSite: "none",
-    maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
+    secure: true, // required for HTTPS (Vercel/Render)
+    sameSite: "none", // required for cross-origin cookies
+    maxAge: 1000 * 60 * 60 * 24 * 7,
   },
 };
 

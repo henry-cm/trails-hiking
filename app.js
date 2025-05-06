@@ -56,7 +56,7 @@ const sessionConfig = {
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: true,
+    secure: true, // Set to true if using HTTPS
     sameSite: "none",
     maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
   },

@@ -43,7 +43,10 @@ function App() {
       credentials: "include",
     })
       .then((res) => res.json())
-      .then((data) => setUser(data.user || null))
+      .then((data) => {
+        console.log("Fetched current user:", data); // 🔍 Add this
+        setUser(data.user || null);
+      })
       .catch((err) => console.error("Error fetching user:", err));
   }, []);
 
